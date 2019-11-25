@@ -2,12 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const historyRoutes = require("./routes/history.routes");
 const favoriteRoutes = require("./routes/favorite.routes");
+const key = require("./keys");
 const app = express();
 
 let urlMongo = `mongodb+srv://damir:1q2w3e4r@cluster0-ghiss.mongodb.net/images`;
 
 mongoose
-  .connect("mongodb+srv://damir:1q2w3e4r@cluster0-ghiss.mongodb.net/images", {
+  .connect(key.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
