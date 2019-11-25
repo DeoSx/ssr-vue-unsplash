@@ -7,7 +7,7 @@ const app = express();
 let urlMongo = `mongodb+srv://damir:1q2w3e4r@cluster0-ghiss.mongodb.net/images`;
 
 mongoose
-  .connect(urlMongo, {
+  .connect("mongodb+srv://damir:1q2w3e4r@cluster0-ghiss.mongodb.net/images", {
     useNewUrlParser: true
   })
   .then(() => console.log("MongoDB connected...."))
