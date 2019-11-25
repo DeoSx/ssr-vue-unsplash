@@ -8,7 +8,8 @@ let urlMongo = `mongodb+srv://damir:1q2w3e4r@cluster0-ghiss.mongodb.net/images`;
 
 mongoose
   .connect("mongodb+srv://damir:1q2w3e4r@cluster0-ghiss.mongodb.net/images", {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
   })
   .then(() => console.log("MongoDB connected...."))
   .catch(error => console.error(error));
