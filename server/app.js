@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const historyRoutes = require("./routes/history.routes");
 const favoriteRoutes = require("./routes/favorite.routes");
 const key = require("./keys");
@@ -17,6 +18,7 @@ mongoose
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 app.use(historyRoutes);
 app.use(favoriteRoutes);
 
